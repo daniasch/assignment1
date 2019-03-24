@@ -11,7 +11,7 @@ import java.lang.management.ManagementFactory;
 public class Greetings {
     public String hello(String name) throws UnknownHostException {
        return String.format("Hello, %s from %s/%s", name, 
-                            InetAddress.getLocalHost().getHostAddress(),
+                            InetAddress.getLocalHost().getHostName(),
                             ManagementFactory.getRuntimeMXBean().getName());
                             
    }

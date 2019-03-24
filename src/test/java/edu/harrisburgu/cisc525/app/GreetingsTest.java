@@ -31,13 +31,13 @@ public class GreetingsTest {
             }
         }
     }
-    
+
     @Test
     public void shouldReturnProperGreetings() throws UnknownHostException {
         Greetings greetings = new Greetings();
         String actual = greetings.hello("John");
         String expected = String.format("Hello, %s from %s/%s", "John", 
-                            InetAddress.getLocalHost().getHostAddress(),
+                            InetAddress.getLocalHost().getHostName(),
                             ManagementFactory.getRuntimeMXBean().getName());
         assertThat(actual, equalTo(expected));
     }
